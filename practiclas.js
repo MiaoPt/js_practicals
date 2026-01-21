@@ -29,3 +29,11 @@ decrementBtn.addEventListener('click', () => {
     }
 
 })
+
+alertBox = document.getElementById('alert-box')
+alertBtn = document.getElementById('toggle-alert-btn')
+
+alertBtn.addEventListener('click', () => {
+    alertBox.classList.toggle('d-none');
+
+})
