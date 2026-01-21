@@ -39,9 +39,11 @@ alertBtn.addEventListener('click', () => {
 })
 
 viewBtns = document.querySelectorAll('button[data-view]')
-viewBtns.forEach(viewBtn => { 
+viewBtns.forEach(viewBtn => {
     viewBtn.addEventListener('click', () => {
-        document.getElementById('view-output').innerHTML = viewBtn.innerHTML
-    
+            viewBtns.forEach(viewBtn => viewBtn.classList.remove('active'));
+            document.getElementById('view-output').innerHTML = viewBtn.innerHTML;
+            viewBtn.classList.add('active')
+        
     }) 
 });
