@@ -37,3 +37,11 @@ alertBtn.addEventListener('click', () => {
     alertBox.classList.toggle('d-none');
 
 })
+
+viewBtns = document.querySelectorAll('button[data-view]')
+viewBtns.forEach(viewBtn => { 
+    viewBtn.addEventListener('click', () => {
+        document.getElementById('view-output').innerHTML = viewBtn.innerHTML
+    
+    }) 
+});
